@@ -1,0 +1,790 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4/"
+     xml:base="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-4="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#">
+    <owl:Ontology rdf:about="http://www.exemple.org/ontologies/tourisme-kabylie"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#appartient_a -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#appartient_a">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Cuisine_Traditionnelle"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Culture_locale"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#contient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#contient">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Lieux_Touristiques"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Infrastructure"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Id_hebergement"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#donne_lieu_a -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#donne_lieu_a">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Culture_locale"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Activité"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#encadre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#encadre">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Guide_Touristique"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Activité"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Id_activite"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#est_encardre_par -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#est_encardre_par">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Guide_Touristique"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Agence_de_voyage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#est_proposee_par -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#est_proposee_par">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Activité"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Agence_de_voyage"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Lieux_Touristiques"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#offre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#offre">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Agence_de_voyage"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Activité"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Id_activite"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">20</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#propose -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#propose">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Agence_de_voyage"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Activité"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#s_inspire_de -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#s_inspire_de">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Activité"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Culture_locale"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#se_passe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#se_passe">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Evenement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Lieux_Touristiques"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Id_site"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#transporte_vers -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#transporte_vers">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Transport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Lieux_Touristiques"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Agence_de_voyage"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Infrastructure"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Capacite -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Capacite">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Transport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Capacite_chambres -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Capacite_chambres">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Hebergement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Capacite_max -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Capacite_max">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Lieux_Touristiques"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Contact -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Contact">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Guide_Touristique"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Date_event -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Date_event">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Evenement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Disponibilite -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Disponibilite">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Transport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Duree -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Duree">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Activité"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Id_activite -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Id_activite">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Activité"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Id_event -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Id_event">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Evenement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Id_guide -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Id_guide">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Guide_Touristique"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Id_hebergement -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Id_hebergement">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Hebergement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Id_site -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Id_site">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Lieux_Touristiques"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Id_transport -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Id_transport">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Transport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Langues -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Langues">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Guide_Touristique"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Localisation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Localisation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Hebergement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Nom_activite -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Nom_activite">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Activité"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Nom_event -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Nom_event">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Evenement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Nom_guide -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Nom_guide">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Guide_Touristique"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Nom_hebergement -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Nom_hebergement">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Hebergement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Nom_site -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Nom_site">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Lieux_Touristiques"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Type_activite -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Type_activite">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Activité"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Type_event -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Type_event">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Evenement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Type_hebergement -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Type_hebergement">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Hebergement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Type_site -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Type_site">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Lieux_Touristiques"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Type_transport -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Type_transport">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Transport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Activité -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Activité"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Agence_de_voyage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Agence_de_voyage"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Ateliers_Artisanales -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Ateliers_Artisanales">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Activité"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Auberge -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Auberge">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Hebergement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Bus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Bus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Transport_publique"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Chalet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Chalet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Hebergement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Couscous -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Couscous">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Cuisine_Traditionnelle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Cuisine_Traditionnelle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Cuisine_Traditionnelle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Culture_locale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Culture_locale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Culture_locale"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Evenement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Evenement"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Festivales -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Festivales">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Evenement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Fetes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Fetes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Festivales"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Guide_Touristique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Guide_Touristique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Agence_de_voyage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Hebergement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Hebergement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Infrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Hotel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Hotel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Hebergement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Infrastructure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Infrastructure"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Lieux_Touristiques -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Lieux_Touristiques"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Montagnes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Montagnes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Lieux_Touristiques"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Musées -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Musées">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Lieux_Touristiques"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Parcs -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Parcs">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Lieux_Touristiques"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Plages -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Plages">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Lieux_Touristiques"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Randonnées -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Randonnées">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Activité"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Taxi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Taxi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Transport_Privé"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Traditions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Traditions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Culture_locale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Transport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Transport">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Infrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Transport_Privé -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Transport_Privé">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Transport"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Transport_publique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Transport_publique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Transport"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Visite_Guidée -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Visite_Guidée">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Activité"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Voiture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Voiture">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Transport_Privé"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Activite1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Activite1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Activité"/>
+        <untitled-ontology-4:Duree rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</untitled-ontology-4:Duree>
+        <untitled-ontology-4:Id_activite rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</untitled-ontology-4:Id_activite>
+        <untitled-ontology-4:Nom_activite>Randonnée au Djurdjura</untitled-ontology-4:Nom_activite>
+        <untitled-ontology-4:Type_activite>Randonnée</untitled-ontology-4:Type_activite>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Activite2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Activite2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Activité"/>
+        <untitled-ontology-4:Duree rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</untitled-ontology-4:Duree>
+        <untitled-ontology-4:Id_activite rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</untitled-ontology-4:Id_activite>
+        <untitled-ontology-4:Nom_activite>Atelier de poterie Kabyle</untitled-ontology-4:Nom_activite>
+        <untitled-ontology-4:Type_activite>Artisanat</untitled-ontology-4:Type_activite>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Evenement1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Evenement1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Evenement"/>
+        <untitled-ontology-4:Date_event rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-12T08:30:00+01:00</untitled-ontology-4:Date_event>
+        <untitled-ontology-4:Id_event rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</untitled-ontology-4:Id_event>
+        <untitled-ontology-4:Nom_event>Festival de Yennayer</untitled-ontology-4:Nom_event>
+        <untitled-ontology-4:Type_event>festival culturel et traditionnel</untitled-ontology-4:Type_event>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Evenement2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Evenement2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Evenement"/>
+        <untitled-ontology-4:Date_event rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-03-14T08:30:00+01:00</untitled-ontology-4:Date_event>
+        <untitled-ontology-4:Id_event rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</untitled-ontology-4:Id_event>
+        <untitled-ontology-4:Nom_event>Amenzu Tefsuth</untitled-ontology-4:Nom_event>
+        <untitled-ontology-4:Type_event>Gastronomique</untitled-ontology-4:Type_event>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Guide1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Guide1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Guide_Touristique"/>
+        <untitled-ontology-4:Contact rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0550123456</untitled-ontology-4:Contact>
+        <untitled-ontology-4:Id_guide>1</untitled-ontology-4:Id_guide>
+        <untitled-ontology-4:Langues>Kabyle,Français</untitled-ontology-4:Langues>
+        <untitled-ontology-4:Nom_guide>Ait Saadi</untitled-ontology-4:Nom_guide>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Guide2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Guide2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Guide_Touristique"/>
+        <untitled-ontology-4:Contact rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0771987654</untitled-ontology-4:Contact>
+        <untitled-ontology-4:Id_guide rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</untitled-ontology-4:Id_guide>
+        <untitled-ontology-4:Langues>Kabyle,Anglais</untitled-ontology-4:Langues>
+        <untitled-ontology-4:Nom_guide>Lounes Amrane</untitled-ontology-4:Nom_guide>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Hebergement1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Hebergement1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Hebergement"/>
+        <untitled-ontology-4:Capacite_chambres rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</untitled-ontology-4:Capacite_chambres>
+        <untitled-ontology-4:Id_hebergement rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</untitled-ontology-4:Id_hebergement>
+        <untitled-ontology-4:Localisation>Tikdja</untitled-ontology-4:Localisation>
+        <untitled-ontology-4:Nom_hebergement>Auberge Tikjda</untitled-ontology-4:Nom_hebergement>
+        <untitled-ontology-4:Type_hebergement>Auberge</untitled-ontology-4:Type_hebergement>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Hebergement2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Hebergement2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Hebergement"/>
+        <untitled-ontology-4:Capacite_chambres rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</untitled-ontology-4:Capacite_chambres>
+        <untitled-ontology-4:Id_hebergement rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</untitled-ontology-4:Id_hebergement>
+        <untitled-ontology-4:Localisation>Akfadou</untitled-ontology-4:Localisation>
+        <untitled-ontology-4:Nom_hebergement>Gîte Akfadou</untitled-ontology-4:Nom_hebergement>
+        <untitled-ontology-4:Type_hebergement>Gîte Akfadou</untitled-ontology-4:Type_hebergement>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Site1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Site1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Lieux_Touristiques"/>
+        <untitled-ontology-4:Capacite_max rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</untitled-ontology-4:Capacite_max>
+        <untitled-ontology-4:Id_site rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</untitled-ontology-4:Id_site>
+        <untitled-ontology-4:Localisation>Bejaia</untitled-ontology-4:Localisation>
+        <untitled-ontology-4:Nom_site>Vallée des Aït Bouguemez</untitled-ontology-4:Nom_site>
+        <untitled-ontology-4:Type_site>Montagne</untitled-ontology-4:Type_site>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Site2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Site2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Lieux_Touristiques"/>
+        <untitled-ontology-4:Capacite_max rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</untitled-ontology-4:Capacite_max>
+        <untitled-ontology-4:Id_site rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</untitled-ontology-4:Id_site>
+        <untitled-ontology-4:Localisation>Tizi Ouzou</untitled-ontology-4:Localisation>
+        <untitled-ontology-4:Nom_site>&apos;Djurdjura&apos;</untitled-ontology-4:Nom_site>
+        <untitled-ontology-4:Type_site>Montagne</untitled-ontology-4:Type_site>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Transport1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Transport1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Transport"/>
+        <untitled-ontology-4:Capacite rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</untitled-ontology-4:Capacite>
+        <untitled-ontology-4:Disponibilite>Tous les jours</untitled-ontology-4:Disponibilite>
+        <untitled-ontology-4:Id_transport rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</untitled-ontology-4:Id_transport>
+        <untitled-ontology-4:Type_transport>Bus</untitled-ontology-4:Type_transport>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Transport2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Transport2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bos/ontologies/2025/0/untitled-ontology-4#Transport"/>
+        <untitled-ontology-4:Capacite rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</untitled-ontology-4:Capacite>
+        <untitled-ontology-4:Disponibilite>Sur réservation</untitled-ontology-4:Disponibilite>
+        <untitled-ontology-4:Id_transport rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</untitled-ontology-4:Id_transport>
+        <untitled-ontology-4:Type_transport>Voiture</untitled-ontology-4:Type_transport>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
